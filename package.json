@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "projet ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch style.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoussaDiarga/KEITA_Moussa_3_062022.git"
+  },
+  "author": "Moussa Diarga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MoussaDiarga/KEITA_Moussa_3_062022/issues"
+  },
+  "homepage": "https://github.com/MoussaDiarga/KEITA_Moussa_3_062022#readme",
+  "devDependencies": {
+    "sass": "^1.52.3"
+  }
+}
