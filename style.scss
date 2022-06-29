@@ -3,6 +3,7 @@
     box-sizing: border-box;
     text-decoration: none;
     color: black;
+   font-family: roboto, sans-serif;
 }
 :root{ 
     --main-color:#9356DC;
@@ -63,116 +64,134 @@ body{
                 /* header */
 
 header{
-    font-family: "shrikhand";
     text-align: center;
     box-shadow: 0px 3px 3px grey;
     padding: 0.3rem ;
     margin:0;
+    & span{
+      font-size: 5vw;
+      font-family: "shrikhand";
+    }
+}
+main .city{
+  background-color: #eaeaea;
+  padding: 7px;
+  align-items: center;
+  justify-content: center;
+  & h2{
+      margin-left: 8px;
+  }
+  & #location{
+    border: transparent;
+    background-color: #eaeaea;
+    margin-left:20px
+  }
+  & button:hover{
+    box-shadow:  #aaa 4px 4px 3px; ;
+  }
+}
+                      /* explorer */
+.explorer{
+  align-items: center;
+  text-align: center;
+  background-color: #F6F6F6;
+  padding-bottom: 8vh;
+  & h2{
+      margin-top:6vh;
+      font-size: 20px;
+      font-family: "roboto";
+  }
+  
+  & p{
+    font-size: 17px;
+    margin-top: 0px;
+    color: #4d4d4d;
+  }
+  
+  & button{
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(var(--pink), var(--main-color)), var(--main-color);
+    color: white ;
+    font-weight: 400;
+    padding: 15px 25px;
+    cursor: pointer; 
+    box-shadow: #aaa 3px 2px 3px;
+    border-radius: 30px 30px 30px 30px;
+    border: 1px solid transparent;
+    transition: 200ms;
+  }
+  & button:hover{
+    box-shadow:  #aaa 4px 4px 3px; ;
+  }
+ 
+  
 }
 
-main .city{
-    background-color: #F3F3F3;
-    padding: 7px;
-    align-items: center;
-    justify-content: center;
-    & h2{
-        margin-left: 8px;
-    }
-}
-                        /* explorer */
-.explorer{
-    align-items: center;
-    text-align: center;
-    & h2{
-        margin-top:6vh;
-        font-size: 20px;
-        font-family: "roboto";
-    }
-    
-    & p{
-      font-size: 17px;
-      margin-top: 0px;
-      color: #4d4d4d;
-    }
-    
-    & button{
-      display: inline-block;
-      font-family: "Roboto", sans-serif;
-      background: linear-gradient(#FF79DA , #9356DC), var(--main-color);
-      color: white ;
-      font-weight: 400;
-      padding: 15px 25px;
-      cursor: pointer; 
-      box-shadow: #aaa 3px 2px 3px;
-      border-radius: 30px 30px 30px 30px;
-      border: 1px solid transparent;
-      transition: 200ms;
-    }
-    & button:hover{
-      box-shadow:  #aaa 4px 4px 3px; ;
-    }
-   
-    
-  }
-  .functioning_section {
-    padding: 3rem 15px;
-  
-    &__group_cards {
-      display: flex;
-      margin: 2rem 0.6rem;
-      flex-direction: column;
-      gap: 15px;
-    }
-    
-    &__card{
-      display: flex;
-      align-items: center;
-      justify-content: center;
+.functioning{
+
+  & .group{
       user-select: none;
       padding: 1px 1px;
-      width: 100%;
-      transition: .2s;
-      border: solid 1px lightgray;
-      border-radius: 22px;
-       box-shadow: 0px 2px 0px lightgrey;
+      width: 94%;
+      transition: 0.2s;
+      margin-left: 20px;
+      list-style: none;
+  }
+} 
+.number{
+ position: relative; 
+ right: 12px;
+ border: solid 1px;
+ width: 22px;
+ border-radius: 50%;
+ height: 22px;
+ display: flex;
+ justify-content: center;
+ background-color: var(--main-color);
+ color: white
+}
 
-      &:hover{
-       background-color:#9256dc3f
-      }
-      
-    }
+.group li{
+  margin: 15px 15px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  border:solid 1px transparent;
+  border-radius: 22px;
+  background-color: #F6F6F6;
+  width: 96%;
+  box-shadow: 0px 2px 11px lightgray;
+  position: relative;
+  right: 5% ;
+}
+.group li:hover{
+  background-color: #9256dc3f;
+}
+.group .title{
+  margin: 20px;
+}
+.group .fa{
+  margin-right: 20px;
+  color:gray;
+  font-size:x-large;
+}
+.choice::marker{
+  position: relative;
+  right: 40px;
+}
 
-    &__number{
-      background-color: var(--main-color);
-      color: white;
-      padding: 4px 8px;
-      margin-left: -28px;
-    }
-    &__icon {
-      font-size: 1.3rem;
-      text-align: center;
-      color: #7e7e7e;
   
-      .fa-mobile-phone {
-        font-size: 1.8rem;
-      }
-    }
-  
-    &__title {
-      font-size: 1rem;
-      font-weight: 600;
-    }
-  }  
 
   .restaurants_section {
     padding: 3rem 15px;
+    background-color: #F6F6F6;
   }
 
 
   .restaurant {
     &__body {
       position: relative;
-      background-color: #F6F6F6;
       margin-top: -30px;
       z-index: 2;
       padding: 0.8rem 1.5rem 0.8rem 1rem;
@@ -214,6 +233,8 @@ main .city{
     position: relative;
     flex: 1;
     background-color: white;
+    border-radius: 22px;
+    box-shadow: 0px 0px 10px grey;
    
   
     &_new {
@@ -238,6 +259,7 @@ main .city{
       width: 100%;
       max-height: 130px;
       object-fit: cover;
+      border-radius: 22px 22px 0px 0px;
     }
   
     &__content {
@@ -250,17 +272,31 @@ main .city{
   
     &_heart {
       transition: 0.2s;
-      font: normal normal normal 14px/1 ForkAwesome;
-      content: "\f08a";
-  
-      &:hover {
-        cursor: pointer;
-        font: normal normal normal 14px/1 ForkAwesome;
-        content: "\f004";
-        color: var(--main-color);
+      font-size: 20px;
+      & .fa-solid{
+        position: relative;
+        right: 4.5vw;
+        opacity: 0;
+        transition: 0.2s;
       }
+
+      &:hover {
+        & .fa-regular.fa-heart::before{
+          opacity:0;
+        }
+        & .fa-solid{
+        color: linear-gradient(var(--pink), var(--main-color)), var(--main-color);;
+        background-color: linear-gradient(var(--pink), var(--main-color)), var(--main-color);
+        position: relative;
+        right: 6vw;
+        opacity:1;
+        transition: 0.2s;
+        transform: scale(1.1);
+        }
+      }
+      
     }
-  }
+   }
   
 
   footer {
@@ -270,10 +306,16 @@ main .city{
     color: var(--light-grey);
   
     a {
-      color: var(--dark-grey);
-    }
+      color: white;
+      font-size: small;
+      & .fa{
+        color: white;
+        padding-right: .64px;
+        margin-right: 10px;
   }
-  
+      }
+    }
+    
   .footer_content {
     display: flex;
     flex-direction: column;
@@ -287,9 +329,7 @@ main .city{
   
     &__menu {
       list-style-type: none;
-      .fa {
-        padding-right: .64px;
-      }
+      
       li {
         margin: .5rem 0;
   
