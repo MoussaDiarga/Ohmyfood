@@ -62,6 +62,12 @@
       right: 0;
       top: 0;
       z-index: 1;
+      width: 22vw;
+      height: 6vh;
+      p{
+        color:#008766;
+        margin: 9px 4px 4px 0;
+      }
     }
   
     &_section {
@@ -72,7 +78,7 @@
   
     &_image img {
       width: 100%;
-      max-height: 130px;
+      max-height: 162px;
       object-fit: cover;
       border-radius: 22px 22px 0px 0px;
     }
@@ -80,6 +86,13 @@
     &__content {
       display: flex;
       padding: 1rem;
+      height: 10vh;
+      & p{
+        margin: 0;
+      }
+      &_title h3{
+        margin: 0;
+      }
       &_body {
         flex: 1;
       }
@@ -94,40 +107,26 @@
         opacity: 0;
         transition: 0.2s;
       }
+      & .restaurant__card_heart{
 
-      &:hover {
-        & .fa-regular.fa-heart::before{
-          opacity:0;
+        &:hover {
+          & .fa-regular.fa-heart::before{
+            opacity:0;
+          }
+          & .fa-solid:hover{
+          background-color: linear-gradient(var(--pink), var(--main-color)), var(--main-color);
+          position: relative;
+          right: 4.5vw;
+          opacity:1;
+          transition: 0.2s;
+          transform: scale(1.1);
+          }
         }
-        & .fa-solid{
-        color: linear-gradient(var(--pink), var(--main-color)), var(--main-color);;
-        background-color: linear-gradient(var(--pink), var(--main-color)), var(--main-color);
-        position: relative;
-        right: 6vw;
-        opacity:1;
-        transition: 0.2s;
-        transform: scale(1.1);
-        }
+        
       }
-      
+
     }
    }
   
 
-  footer {
-    padding-top: 16px;
-    padding-bottom: 52px;
-    background-color: var(--dark-grey);
-    color: var(--light-grey);
   
-    a {
-      color: white;
-      font-size: small;
-      & .fa{
-        color: white;
-        padding-right: .64px;
-        margin-right: 10px;
-  }
-      }
-    }
- 

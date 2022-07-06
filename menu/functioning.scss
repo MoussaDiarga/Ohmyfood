@@ -40,6 +40,9 @@
           &:hover{
             background-color: #9256dc3f;
             cursor: pointer;
+            & .fa{
+              color:#9256dc3f ;
+            }
           }
           &::marker{
             position: relative;
@@ -53,6 +56,7 @@
           margin-right: 20px;
           color:gray;
           font-size:x-large;
+         
         }
     }
   } 
