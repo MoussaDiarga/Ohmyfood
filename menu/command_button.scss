@@ -1,0 +1,19 @@
+
+/*COMMAND BUTTON*/
+
+.command{
+    button{
+      display: inline-block;
+      font-family: "Roboto", sans-serif;
+      background: linear-gradient(var(--pink), var(--main-color)), var(--main-color);
+      color: white;
+      font-weight: 400;
+      padding: 15px 25px;
+      cursor: pointer;
+      box-shadow: #aaa 3px 2px 3px;
+      border-radius: 30px 30px 30px 30px;
+      border: 1px solid transparent;
+      transition: 200ms;
+      margin: 13% 28% 10% 30%;
+    }
+  }

@@ -1,0 +1,82 @@
+/*PAGES*/
+
+.restaurant_page{
+
+    img{
+      width: 100%;
+      max-height: 130px;
+      object-fit: cover;
+    }
+  
+  }
+  .restaurant_page_content{
+    border: 1px solid #F6F6F6;
+    border-radius: 22px 22px 0 0;
+    background-color:#F6F6F6;
+    position: relative;
+    bottom: 3vh;
+    h2{
+      margin-left: 5%;
+      margin-bottom: 0;
+      font-family: "shrikhand";
+    }
+    p{
+      margin-left: 5%;
+      border-bottom: 3px solid var(--green);
+      max-width: 40px;
+      margin-bottom: 0%;
+      margin-top: 0;
+    }
+    & .fa-heart__box{
+      display: flex;
+      justify-content: flex-end;
+      position: absolute;
+      position: absolute;
+      right: 79vw;
+      top: 8vh;
+      & .fa-heart_full{
+        left: 74vw;
+        bottom: 6vh;
+    }
+      & .fa-heart__content_empty {
+      position: relative;
+      left: 74vw;
+      bottom: 6vh;
+  }
+  
+      }
+    }
+  
+  
+  .restaurant_page_content_menu{
+    margin-top: 0%;
+    padding-left: 2%;
+        & li{
+          list-style: none;
+          margin: 15px 22px;
+          font-weight: bold;
+          display: flex;
+          border-radius: 22px;
+          background-color: white;
+          width: 96%;
+          box-shadow: 0px 2px 11px lightgrey;
+          position: relative;
+          right: 5%;
+          padding-left: 0%;
+          flex-direction: column;
+          & .menu{
+            margin: 0.5% 2%;
+            }
+            & .second_child{
+              font-weight: 100;
+              font-size: small;
+              display: flex;
+              justify-content: space-between;
+              padding: 0 5% 2% 0;
+              margin-bottom: 0;
+              
+            }
+          }
+  }
+  
+  
