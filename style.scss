@@ -6,6 +6,7 @@
 @import"./menu/pages_restaurant.scss";
 @import"./menu/heart_animation.scss";
 @import"./menu/command_button.scss";
+@import"./menu/loader.scss";
 /* text-align */
 
 .text-center {
@@ -52,7 +53,8 @@
     justify-content: space-around;
   }
 body{
-    margin:0px
+    margin:0px;
+    overflow-x: hidden;
 }
                 /* header */
 
@@ -127,34 +129,71 @@ main .city{
     
 
 /*CHECK*/
+.restaurant__card_check {
+  background-color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  margin-right: -4rem;
+  transition-duration: 0.5s;
+  position: relative;
+  left: 74vw;
+  bottom: 9vh;
+  height: 46px;
+  margin-bottom: -49px;
+  width: 63px;
+  border-radius: 0 24px 24px 0;
+  
+}
+.restaurant__card_check .rounded {
+  border-radius: 50% 50% 50% 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #fff;
+  color: var(--main-color);
+}
+.restaurant__card_check .fa {
+  margin: 5px;
+}
+.restaurant__card:hover {
+  transition: 0.2s;
+  box-shadow: #35353547 2px 4px 7px;
+}
+.restaurant__card:hover .restaurant__card_check {
+  margin: 0;
+}
+.restaurant__card:hover .restaurant__card_check .fa {
+  animation: check 0.5s;
+}
+.anim_show {
+  animation: show 0.3s 0.3s both;
+  animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+}
 
-      .restaurant__card_check {
-        background-color: #99E2D0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 4rem;
-        margin-right: -4rem;
-        transition-duration: 0.5s;
-      }
-      .restaurant__card_check .rounded {
-        border-radius: 50% 50% 50% 50%;
-        width: 1.5rem;
-        height: 1.5rem;
-        background-color: #fff;
-        color: #99E2D0;
-      }
-      .restaurant__card_check .fa {
-        margin: 5px;
-      }
-      .restaurant__card:hover {
-        transition: 0.2s;
-        box-shadow: #35353547 2px 4px 7px;
-      }
-      .restaurant__card:hover .restaurant__card_check {
-        margin: 0;
-      }
-      .restaurant__card:hover .restaurant__card_check .fa {
-        animation: check 0.5s;
-      }
-        
+
+@keyframes check {
+  from {
+    transform: rotate(-290deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>oh my food</title>
+    <title>La note enchantée</title>
     <script src="https://kit.fontawesome.com/6b88a2a61f.js" crossorigin="anonymous"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap"
@@ -15,6 +15,9 @@
 <body>
     
     <header class="relative">
+      <a href="../index.html" title="retour">
+        <i class="fas fa-arrow-left"></i>
+</a>
         <span>Ohmyfood</span> 
     </header>
     
@@ -24,23 +27,20 @@
     </div>
   
     <div class="restaurant_page_content">
-      <h2> La note enchantée</h2>
+      <h1> La note enchantée</h1>
       <span class="fa-heart__box fa-heart__content">
         <i class="fas fa-heart  fa-heart_full"></i>
         <i class="far fa-heart fa-heart__content_empty"></i>
       </span>
-      <p>ENTRÉES</p>
+      <h2>ENTRÉES</h2>
   
       <ul class="restaurant_page_content_menu flex column">
-        <li> <span class="menu">Ravioles de foie gras</span>  <span class="menu second_child">Accompagnées de leur crème à la truffe <b>25€</b> </span> <div class="restaurant__card_check"> <div class="rounded"><i class="fa fa-check"></i></div></div></li> 
-        
-          
-         
+        <li class="flex anim_show"> <span class="menu">Ravioles de foi gras</span>  <span class="menu second_child">Accompagnées de leur crème à la truffe <b>25€</b> </span><div class="restaurant__card_check"><span class="rounded"><i class="fa fa-check"></i></span></div> </li>  
         <li> <span class="menu">Cavar osciètre</span>  <span class="menu second_child">Sur blini à la farine de blé noir <b>35€</b>  </span> </li> <!--<div class="menu_check">check</div>--> 
         <li> <span class="menu">Foie gras de canard cuit entier</span>  <span class="menu second_child">Confiture de figue et pain toasté<b>35€</b></span> </li> <!--<div class="menu_check">check </div>--> 
       </ul>
 
-      <p>PLATS</p>
+      <h2>PLATS</h2>
   
       <ul class="restaurant_page_content_menu flex column">
         <li> <span class="menu">Noix de coquilles Saint-Jacques</span>  <span class="menu second_child">Sur lit de purée de célerie-rave<b>40€</b> </span> </li> <!--<div class="menu_check">check</div>--> 
@@ -48,7 +48,7 @@
         <li> <span class="menu">Mijoté de queue de boeuf</span>  <span class="menu second_child">Et riz sauvage aux zests de citron<b>44€</b></span> </li> <!--<div class="menu_check">check </div>--> 
       </ul>
 
-      <p>DESSERTS</p>
+      <h2>DESSERTS</h2>
   
       <ul class="restaurant_page_content_menu flex column">
         <li> <span class="menu">Macaron noisette et chocolat</span>  <span class="menu second_child">Glace au caramel brun et sel de Guérande<b>18€</b> </span> </li> <!--<div class="menu_check">check</div>--> 
@@ -58,34 +58,37 @@
   
       <div class="command">
       <button>Commander</button>
-    </div>
+      </div>
  
-     <!--FOOTER-->
-    <footer class="footer_content">
-      <a class="footer_content__logo" href="/">
-        <img src="../assets/img/ohmyfood.png" alt="logo Ohmyfood " />
-      </a>
-      <ul class="footer_content__menu">
-        <li>
-          <a href="#"
-            ><i class="fa fa-utensils"></i> Proposer un restaurant</a
-          >
-        </li>
-        <li>
-          <a href="#"><i class="fa fa-handshake"></i> Devenir partenaire</a>
-        </li>
-        <li>
-          <a href="#">Mentions légales</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
-      </ul>
-  </footer>
+  
     </div>
   
 
-
  </main>
+   <!--FOOTER-->
+   <footer class="footer_content">
+    <a class="footer_content__logo" href="/">
+      <img src="../assets/img/ohmyfood.png" alt="logo Ohmyfood " />
+    </a>
+    <ul class="footer_content__menu">
+      <li>
+        <a href="#"
+          ><i class="fa fa-utensils"></i> Proposer un restaurant</a
+        >
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-handshake"></i> Devenir partenaire</a>
+      </li>
+      <li>
+        <a href="#">Mentions légales</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+    </ul>
+</footer>
+
 </body>
 </html>
+
+

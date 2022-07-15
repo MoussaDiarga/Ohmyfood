@@ -120,7 +120,7 @@
   box-shadow: 0px 0px 10px grey;
 }
 .restaurants__card_new {
-  background-color: #99e2d0;
+  background-color: var(--green);
   color: #008766;
   margin: 1rem;
   padding: 0.2rem 0.7rem;
@@ -227,12 +227,12 @@
   position: relative;
   bottom: 3vh;
 }
-.restaurant_page_content h2 {
+.restaurant_page_content h1 {
   margin-left: 5%;
   margin-bottom: 0;
   font-family: "shrikhand";
 }
-.restaurant_page_content p {
+.restaurant_page_content h2 {
   margin-left: 5%;
   border-bottom: 3px solid var(--green);
   max-width: 40px;
@@ -248,13 +248,13 @@
   top: 8vh;
 }
 .restaurant_page_content .fa-heart__box .fa-heart_full {
-  left: 74vw;
-  bottom: 6vh;
+  left: 77vw;
+  bottom: 4vh;
 }
 .restaurant_page_content .fa-heart__box .fa-heart__content_empty {
   position: relative;
-  left: 74vw;
-  bottom: 6vh;
+  left: 77vw;
+  bottom: 4vh;
 }
 
 .restaurant_page_content_menu {
@@ -285,6 +285,16 @@
   justify-content: space-between;
   padding: 0 5% 2% 0;
   margin-bottom: 0;
+}
+
+header i {
+  position: relative;
+  right: 31vw;
+}
+
+.command {
+  background-color: #F6F6F6;
+  margin-top: -3vh;
 }
 
 /*COEUR*/
@@ -360,6 +370,43 @@
   margin: 13% 28% 10% 30%;
 }
 
+.loader {
+  background-color: white;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+  animation: disappear 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
+}
+.loader::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-right: 5px solid transparent;
+  border-top: 5px dashed var(--main-color);
+  border-radius: 50%;
+  animation: spin 3s infinite linear;
+}
+
+@keyframes disappear {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 /* text-align */
 .text-center {
   text-align: center;
@@ -406,6 +453,7 @@
 
 body {
   margin: 0px;
+  overflow-x: hidden;
 }
 
 /* header */
@@ -474,13 +522,20 @@ main .city button:hover {
 
 /*CHECK*/
 .restaurant__card_check {
-  background-color: #99E2D0;
+  background-color: var(--green);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 4rem;
   margin-right: -4rem;
   transition-duration: 0.5s;
+  position: relative;
+  left: 74vw;
+  bottom: 9vh;
+  height: 46px;
+  margin-bottom: -49px;
+  width: 63px;
+  border-radius: 0 24px 24px 0;
 }
 
 .restaurant__card_check .rounded {
@@ -488,7 +543,7 @@ main .city button:hover {
   width: 1.5rem;
   height: 1.5rem;
   background-color: #fff;
-  color: #99E2D0;
+  color: var(--main-color);
 }
 
 .restaurant__card_check .fa {
@@ -506,6 +561,30 @@ main .city button:hover {
 
 .restaurant__card:hover .restaurant__card_check .fa {
   animation: check 0.5s;
+}
+
+.anim_show {
+  animation: show 0.3s 0.3s both;
+  animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+@keyframes check {
+  from {
+    transform: rotate(-290deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
