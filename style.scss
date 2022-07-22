@@ -7,6 +7,7 @@
 @import"./menu/heart_animation.scss";
 @import"./menu/command_button.scss";
 @import"./menu/loader.scss";
+@import"./menu/desktop.scss";
 /* text-align */
 
 .text-center {
@@ -16,7 +17,9 @@
   .text-left {
     text-align:left;
   }
-  
+  .mt_7{
+    margin-top: 7%;
+  }
   /* position */ 
   
   .relative {
@@ -118,6 +121,8 @@ main .city{
   }
   & button:hover{
     box-shadow:  #aaa 4px 4px 3px; ;
+    background-blend-mode: lighten;
+    background-color: #ae80e5;
   }
  
   
@@ -129,7 +134,8 @@ main .city{
     
 
 /*CHECK*/
-.restaurant__card_check {
+
+/*.restaurant__card_check {
   background-color: var(--green);
   display: flex;
   align-items: center;
@@ -146,14 +152,15 @@ main .city{
   border-radius: 0 24px 24px 0;
   
 }
+
 .restaurant__card_check .rounded {
   border-radius: 50% 50% 50% 50%;
   width: 1.5rem;
   height: 1.5rem;
   background-color: #fff;
   color: var(--main-color);
-}
-.restaurant__card_check .fa {
+}*/
+/*.restaurant__card_check .fa {
   margin: 5px;
 }
 .restaurant__card:hover {
@@ -189,6 +196,261 @@ main .city{
     opacity: 1;
     transform: translateY(0);
   }
+}*/
+
+/*
+*{
+  
+  box-sizing:border-box;
+
+}
+#card{
+
+   width: 250px;
+   height:75px;
+   border:1px solid #616161;
+   margin:0 auto;
+   margin-top:30px;
+   border-radius:15px;
+   padding:15px;
+   position:relative;
+
+}
+#card #text_1{
+  
+   transition:width ease 0.5s;
+
+}
+
+#card div{
+
+    position:absolute;
+    right:0;
+    top:0;
+    bottom:0;
+    background:green;
+    width:0;
+    border-radius:0 15px 15px 0;
+    transition:width ease 0.5s;
+
+}
+
+#card:hover div{
+
+  width:75px;
+
+}
+#card:hover #text_1{
+  width:calc(250px - 90px);
+     text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+
+}
+
+#card #price{
+width:100%;
+text-align:right;
+transition:width ease 0.5s;
+}
+
+#card:hover #price{
+
+ width:calc(250px - 100px); 
+
+}*/
+
+
+
+
+
+
+
+/*
+#card{
+
+  list-style: none;
+  margin: 15px 22px;
+  font-weight: bold;
+  display: flex;
+  border-radius: 22px;
+  background-color: white;
+  width: 96%;
+  box-shadow: 0px 2px 11px lightgrey;
+  position: relative;
+  right: 5%;
+  padding-left: 0%;
+  flex-direction: column;
+  position: relative;
+  animation: transform;
+  #text_1{
+    margin: 0;
+  }
+  .manu{
+    margin: 0;
+  }
+  span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: small;
+    .price{
+      margin: 0;
+      margin-left: 123px;
+    }
+}
+  }
+  .check{
+    background-color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -4rem;
+  transition-duration: 0.5s;
+  bottom: 9vh;
+  height: 46px;
+  margin-bottom: -49px;
+  border-radius: 0 24px 24px 0;
+  position: absolute;
+  width: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 77vw;
+  height: 100%;
+};
+  
+#card:hover{
+  .check{
+    width: 63px ;
+    bottom: 0;
+    right: 0;
+    left: 77vw;
+    top:0;
+    height: 5.5vh;
+  }
+}
+*/
+
+
+
+
+
+#card{
+  
+  width: 96%;
+  height:69px;
+  margin:0 auto;
+  margin-top:30px;
+  border-radius: 19px;
+  padding:15px;
+  position:relative;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0px 2px 11px lightgrey;
+
+  p{
+    font-size: small;
+    margin-top: 6px;
+  }
+  
+  .rounded{
+    background-color: white;
+    position: relative;
+    top: 36%;
+    left: 45%;
+    border-radius: 50% 50% 50% 50%;
+    i{
+      width: 19px;
+      height: 2px;
+    }
+    .fa-check{
+      animation: check 0.5s;
+
+    }
+  }
+}
+@keyframes check {
+  from {
+    transform: rotate(-290deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+#card #text{
+ 
+  transition:width ease 0.5s;
+  margin: 0;
+  font-weight: bold;
+  font-size: large;
+}
+
+#card div{
+
+   position:absolute;
+   right:0;
+   top:0;
+   bottom:0;
+   background: var(--green);
+   width:0;
+   border-radius:0 15px 15px 0;
+   transition:width ease 0.5s;
+
+}
+
+#card:hover div{
+
+ width:75px;
+
+}
+#card:hover #text{
+ width:calc(250px - 90px);
+ text-overflow:ellipsis;
+ overflow:hidden;
+ white-space:nowrap;
+
+}
+
+#card #price{
+width:100%;
+text-align:right;
+transition:width ease 0.5s;
+margin-top:-10px;
+position: absolute;
+right: 2vw;
+}
+
+#card:hover{
+p{
+width:calc(250px - 90px);
+text-overflow:ellipsis;
+overflow:hidden;
+white-space:nowrap;
+ }
+#price{
+ width:calc(250px - 100px);
+ margin-right: 20%; 
+ transition: 0.5s;
+ }
+ div:hover{
+
+   span{
+  
+     i{
+       animation-name: check_spin;
+     }
+   }
+ }
+}
+@keyframes check_spin{
+ 0%{
+   transform: rotate(-270deg);
+ }
+ 100%{
+   transform: rotate(0);
+ }
 }
 
 

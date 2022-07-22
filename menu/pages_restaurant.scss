@@ -9,45 +9,19 @@
     }
   
   }
-  .restaurant_page_content{
-    border: 1px solid #F6F6F6;
-    border-radius: 22px 22px 0 0;
-    background-color:#F6F6F6;
-    position: relative;
-    bottom: 3vh;
-    h1{
-      margin-left: 5%;
-      margin-bottom: 0;
-      font-family: "shrikhand";
-    }
-    h2{
-      margin-left: 5%;
-      border-bottom: 3px solid var(--green);
-      max-width: 40px;
-      margin-bottom: 0%;
-      margin-top: 0;
-    }
-    & .fa-heart__box{
-      display: flex;
-      justify-content: flex-end;
-      position: absolute;
-      position: absolute;
-      right: 79vw;
-      top: 8vh;
-      & .fa-heart_full{
-        left: 77vw;
-        bottom: 4vh;
-    }
-      & .fa-heart__content_empty {
+
+  header{
+    i{
       position: relative;
-      left: 77vw;
-      bottom: 4vh;
+      right: 31vw;
+    }
+  }
+  .command{
+    background-color: #F6F6F6;
+    margin-top: -3vh;
   }
   
-      }
-    }
-  
-  
+
   .restaurant_page_content_menu{
     margin-top: 0%;
     padding-left: 2%;
@@ -64,6 +38,7 @@
           right: 5%;
           padding-left: 0%;
           flex-direction: column;
+          position: relative;
           & .menu{
             margin: 0.5% 2%;
             }
@@ -73,19 +48,50 @@
               display: flex;
               justify-content: space-between;
               padding: 0 5% 2% 0;
-              margin-bottom: 0;
-              
+              margin-bottom: 0;              
             }
           }
   }
-  header{
-    i{
-      position: relative;
-      right: 31vw;
+
+
+  .restaurant_page_content{
+    border: 1px solid #F6F6F6;
+    border-radius: 22px 22px 0 0;
+    background-color:#F6F6F6;
+    position: relative;
+    bottom: 3vh;
+    h1{
+      margin-left: 5%;
+      margin-bottom: 0;
+      font-family: "shrikhand";
     }
+    h2{
+      margin-left: 5%;
+      border-bottom: 3px solid var(--green);
+      max-width: 40px;
+      margin-bottom: 0%;
+    }
+    & .fa-heart__box{
+      display: flex;
+      justify-content: flex-end;
+      position: absolute;
+      position: absolute;
+      right: 79vw;
+      top: 8vh;
+      & .fa-heart_full{
+        left: 77vw;
+        bottom: 5vh;
+    }
+      & .fa-heart__content_empty {
+      position: relative;
+      left: 77vw;
+      bottom: 5vh;
   }
-  .command{
-    background-color: #F6F6F6;
-    margin-top: -3vh;
-  }
+  
+      }
+    }
+    .fa-heart:before{
+      font-size: 24px;
+    }
+  
   

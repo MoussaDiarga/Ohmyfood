@@ -15,5 +15,10 @@
       border: 1px solid transparent;
       transition: 200ms;
       margin: 13% 28% 10% 30%;
+      &:hover{
+        box-shadow:  #aaa 4px 4px 3px; ;
+        background-blend-mode: lighten;
+        background-color: #ae80e5;
+      }
     }
   }

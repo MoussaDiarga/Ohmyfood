@@ -55,7 +55,7 @@
   cursor: pointer;
 }
 .functioning .functioning_group .functioning_group_choice:hover .fa {
-  color: rgba(146, 86, 220, 0.2470588235);
+  color: #7F00FF;
 }
 .functioning .functioning_group .functioning_group_choice::marker {
   position: relative;
@@ -195,10 +195,11 @@
   width: 100px;
   filter: invert(1);
   padding-bottom: 1rem;
-  margin-left: 50px;
+  margin-left: 14px;
 }
 .footer_content__menu {
   list-style-type: none;
+  padding-left: 0;
 }
 .footer_content__menu li {
   margin: 0 1rem;
@@ -220,41 +221,14 @@
   object-fit: cover;
 }
 
-.restaurant_page_content {
-  border: 1px solid #F6F6F6;
-  border-radius: 22px 22px 0 0;
+header i {
+  position: relative;
+  right: 31vw;
+}
+
+.command {
   background-color: #F6F6F6;
-  position: relative;
-  bottom: 3vh;
-}
-.restaurant_page_content h1 {
-  margin-left: 5%;
-  margin-bottom: 0;
-  font-family: "shrikhand";
-}
-.restaurant_page_content h2 {
-  margin-left: 5%;
-  border-bottom: 3px solid var(--green);
-  max-width: 40px;
-  margin-bottom: 0%;
-  margin-top: 0;
-}
-.restaurant_page_content .fa-heart__box {
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  position: absolute;
-  right: 79vw;
-  top: 8vh;
-}
-.restaurant_page_content .fa-heart__box .fa-heart_full {
-  left: 77vw;
-  bottom: 4vh;
-}
-.restaurant_page_content .fa-heart__box .fa-heart__content_empty {
-  position: relative;
-  left: 77vw;
-  bottom: 4vh;
+  margin-top: -3vh;
 }
 
 .restaurant_page_content_menu {
@@ -274,6 +248,7 @@
   right: 5%;
   padding-left: 0%;
   flex-direction: column;
+  position: relative;
 }
 .restaurant_page_content_menu li .menu {
   margin: 0.5% 2%;
@@ -287,14 +262,44 @@
   margin-bottom: 0;
 }
 
-header i {
+.restaurant_page_content {
+  border: 1px solid #F6F6F6;
+  border-radius: 22px 22px 0 0;
+  background-color: #F6F6F6;
   position: relative;
-  right: 31vw;
+  bottom: 3vh;
+}
+.restaurant_page_content h1 {
+  margin-left: 5%;
+  margin-bottom: 0;
+  font-family: "shrikhand";
+}
+.restaurant_page_content h2 {
+  margin-left: 5%;
+  border-bottom: 3px solid var(--green);
+  max-width: 40px;
+  margin-bottom: 0%;
+}
+.restaurant_page_content .fa-heart__box {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  position: absolute;
+  right: 79vw;
+  top: 8vh;
+}
+.restaurant_page_content .fa-heart__box .fa-heart_full {
+  left: 77vw;
+  bottom: 5vh;
+}
+.restaurant_page_content .fa-heart__box .fa-heart__content_empty {
+  position: relative;
+  left: 77vw;
+  bottom: 5vh;
 }
 
-.command {
-  background-color: #F6F6F6;
-  margin-top: -3vh;
+.fa-heart:before {
+  font-size: 24px;
 }
 
 /*COEUR*/
@@ -351,7 +356,7 @@ header i {
   z-index: 9999;
   position: absolute;
   left: 75vw;
-  bottom: 7vh;
+  bottom: 6vh;
 }
 
 /*COMMAND BUTTON*/
@@ -368,6 +373,11 @@ header i {
   border: 1px solid transparent;
   transition: 200ms;
   margin: 13% 28% 10% 30%;
+}
+.command button:hover {
+  box-shadow: #aaa 4px 4px 3px;
+  background-blend-mode: lighten;
+  background-color: #ae80e5;
 }
 
 .loader {
@@ -407,6 +417,21 @@ header i {
     transform: rotate(360deg);
   }
 }
+@media screen and (min-width: 768px) {
+  .functioning .functioning_title {
+    text-align: center;
+  }
+  .functioning_group {
+    display: flex;
+  }
+  .restaurants_section h2 {
+    text-align: center;
+  }
+  .restaurants_section .restaurants__card_section {
+    display: flex;
+    flex-direction: row;
+  }
+}
 /* text-align */
 .text-center {
   text-align: center;
@@ -414,6 +439,10 @@ header i {
 
 .text-left {
   text-align: left;
+}
+
+.mt_7 {
+  margin-top: 7%;
 }
 
 /* position */
@@ -518,10 +547,12 @@ main .city button:hover {
 }
 .explorer button:hover {
   box-shadow: #aaa 4px 4px 3px;
+  background-blend-mode: lighten;
+  background-color: #ae80e5;
 }
 
 /*CHECK*/
-.restaurant__card_check {
+/*.restaurant__card_check {
   background-color: var(--green);
   display: flex;
   align-items: center;
@@ -536,6 +567,7 @@ main .city button:hover {
   margin-bottom: -49px;
   width: 63px;
   border-radius: 0 24px 24px 0;
+
 }
 
 .restaurant__card_check .rounded {
@@ -544,29 +576,25 @@ main .city button:hover {
   height: 1.5rem;
   background-color: #fff;
   color: var(--main-color);
-}
-
-.restaurant__card_check .fa {
+}*/
+/*.restaurant__card_check .fa {
   margin: 5px;
 }
-
 .restaurant__card:hover {
   transition: 0.2s;
-  box-shadow: rgba(53, 53, 53, 0.2784313725) 2px 4px 7px;
+  box-shadow: #35353547 2px 4px 7px;
 }
-
 .restaurant__card:hover .restaurant__card_check {
   margin: 0;
 }
-
 .restaurant__card:hover .restaurant__card_check .fa {
   animation: check 0.5s;
 }
-
 .anim_show {
   animation: show 0.3s 0.3s both;
   animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
 }
+
 
 @keyframes check {
   from {
@@ -584,6 +612,232 @@ main .city button:hover {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}*/
+/*
+*{
+
+  box-sizing:border-box;
+
+}
+#card{
+
+   width: 250px;
+   height:75px;
+   border:1px solid #616161;
+   margin:0 auto;
+   margin-top:30px;
+   border-radius:15px;
+   padding:15px;
+   position:relative;
+
+}
+#card #text_1{
+
+   transition:width ease 0.5s;
+
+}
+
+#card div{
+
+    position:absolute;
+    right:0;
+    top:0;
+    bottom:0;
+    background:green;
+    width:0;
+    border-radius:0 15px 15px 0;
+    transition:width ease 0.5s;
+
+}
+
+#card:hover div{
+
+  width:75px;
+
+}
+#card:hover #text_1{
+  width:calc(250px - 90px);
+     text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+
+}
+
+#card #price{
+width:100%;
+text-align:right;
+transition:width ease 0.5s;
+}
+
+#card:hover #price{
+
+ width:calc(250px - 100px); 
+
+}*/
+/*
+#card{
+
+  list-style: none;
+  margin: 15px 22px;
+  font-weight: bold;
+  display: flex;
+  border-radius: 22px;
+  background-color: white;
+  width: 96%;
+  box-shadow: 0px 2px 11px lightgrey;
+  position: relative;
+  right: 5%;
+  padding-left: 0%;
+  flex-direction: column;
+  position: relative;
+  animation: transform;
+  #text_1{
+    margin: 0;
+  }
+  .manu{
+    margin: 0;
+  }
+  span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: small;
+    .price{
+      margin: 0;
+      margin-left: 123px;
+    }
+}
+  }
+  .check{
+    background-color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -4rem;
+  transition-duration: 0.5s;
+  bottom: 9vh;
+  height: 46px;
+  margin-bottom: -49px;
+  border-radius: 0 24px 24px 0;
+  position: absolute;
+  width: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 77vw;
+  height: 100%;
+};
+
+#card:hover{
+  .check{
+    width: 63px ;
+    bottom: 0;
+    right: 0;
+    left: 77vw;
+    top:0;
+    height: 5.5vh;
+  }
+}
+*/
+#card {
+  width: 96%;
+  height: 69px;
+  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 19px;
+  padding: 15px;
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0px 2px 11px lightgrey;
+}
+#card p {
+  font-size: small;
+  margin-top: 6px;
+}
+#card .rounded {
+  background-color: white;
+  position: relative;
+  top: 36%;
+  left: 45%;
+  border-radius: 50% 50% 50% 50%;
+}
+#card .rounded i {
+  width: 19px;
+  height: 2px;
+}
+#card .rounded .fa-check {
+  animation: check 0.5s;
+}
+
+@keyframes check {
+  from {
+    transform: rotate(-290deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+#card #text {
+  transition: width ease 0.5s;
+  margin: 0;
+  font-weight: bold;
+  font-size: large;
+}
+
+#card div {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: var(--green);
+  width: 0;
+  border-radius: 0 15px 15px 0;
+  transition: width ease 0.5s;
+}
+
+#card:hover div {
+  width: 75px;
+}
+
+#card:hover #text {
+  width: 160px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#card #price {
+  width: 100%;
+  text-align: right;
+  transition: width ease 0.5s;
+  margin-top: -10px;
+  position: absolute;
+  right: 2vw;
+}
+
+#card:hover p {
+  width: 160px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#card:hover #price {
+  width: 150px;
+  margin-right: 20%;
+  transition: 0.5s;
+}
+#card:hover div:hover span i {
+  animation-name: check_spin;
+}
+
+@keyframes check_spin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
   }
 }
 
