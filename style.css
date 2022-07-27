@@ -119,6 +119,10 @@
   border-radius: 22px;
   box-shadow: 0px 0px 10px grey;
 }
+.restaurants__card :hover {
+  transition: 0.2s;
+  filter: brightness(0.8);
+}
 .restaurants__card_new {
   background-color: var(--green);
   color: #008766;

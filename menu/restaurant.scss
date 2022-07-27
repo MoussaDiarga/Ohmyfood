@@ -50,7 +50,10 @@
     background-color: white;
     border-radius: 22px;
     box-shadow: 0px 0px 10px grey;
-   
+    & :hover{
+      transition: 0.2s;
+      filter: brightness(0.8);
+    }
   
     &_new {
       background-color: var(--green);
