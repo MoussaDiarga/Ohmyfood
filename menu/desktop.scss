@@ -1,20 +1,89 @@
 @media screen and (min-width: 768px){
-.functioning .functioning_title{
-    text-align: center;
-}
-.functioning_group{
-    display: flex;
+
+.functioning{
+    margin: 0 13vw;
+    & .functioning_group{
+        display: flex;
+    }
 }
 
 
 
 .restaurants_section{
-    h2{ 
-        text-align: center;
-    }
-    .restaurants__card_section{
+    margin: 0 13vw;
+    & .restaurants__card_section{
         display: flex;
         flex-direction: row;
+        & .restaurants__card{
+            height: 32vh;
+            &_new{
+                width: 8vw;
+                height: 5vh;
+                p{
+                    margin: 6px 4px 4px 0;
+                }
+            }
+        }
+
+    }
+    & .restaurants__card__content{
+        position: relative;
+        & .fa-heart__box{
+            position: relative;
+            .fa-heart_full{
+                position: absolute;
+                left: 78vw;
+                bottom: 7vh;
+            }
+            .fa-heart__content_empty {
+                position: absolute;
+                left: 78vw;
+                bottom: 7vh;
+            }
+        }
     }
 }
+
+
+.restaurant_page_content{
+    display: flex;
+    justify-content: center;
+    gap: 19px;
+  }
+  .card{
+    width: 26vw;
+    height: 17%;
+    & p{
+        font-size: small;
+        margin-top: 6px;
+        display: flex;
+        align-items: end;
+    }
+  }
+.restaurant_page{
+    img{
+        max-height: 52vh;
+    }
+}
+
+
+
+  .command{
+    margin: 2%;
+    & button{
+        margin:0;
+    }
+  }
+
+  .footer_content{
+    display: flex;
+    &__logo{
+        position: relative;
+        top: 9vh;
+    }
+    & .footer_content__menu{
+        display: flex;
+        justify-content: space-evenly;
+    }
+  }
 }

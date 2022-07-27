@@ -143,7 +143,7 @@
 }
 .restaurants__card_image img {
   width: 100%;
-  max-height: 162px;
+  max-height: 19vh;
   object-fit: cover;
   border-radius: 22px 22px 0px 0px;
 }
@@ -214,7 +214,6 @@
   margin-right: 10px;
 }
 
-/*PAGES*/
 .restaurant_page img {
   width: 100%;
   max-height: 130px;
@@ -227,81 +226,166 @@ header i {
 }
 
 .command {
-  background-color: #F6F6F6;
-  margin-top: -3vh;
+  text-align: center;
 }
 
-.restaurant_page_content_menu {
-  margin-top: 0%;
-  padding-left: 2%;
-}
-.restaurant_page_content_menu li {
-  list-style: none;
-  margin: 15px 22px;
-  font-weight: bold;
-  display: flex;
-  border-radius: 22px;
-  background-color: white;
-  width: 96%;
-  box-shadow: 0px 2px 11px lightgrey;
-  position: relative;
-  right: 5%;
-  padding-left: 0%;
-  flex-direction: column;
-  position: relative;
-}
-.restaurant_page_content_menu li .menu {
-  margin: 0.5% 2%;
-}
-.restaurant_page_content_menu li .second_child {
-  font-weight: 100;
-  font-size: small;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 5% 2% 0;
-  margin-bottom: 0;
-}
-
-.restaurant_page_content {
-  border: 1px solid #F6F6F6;
-  border-radius: 22px 22px 0 0;
-  background-color: #F6F6F6;
-  position: relative;
-  bottom: 3vh;
-}
-.restaurant_page_content h1 {
-  margin-left: 5%;
-  margin-bottom: 0;
-  font-family: "shrikhand";
-}
-.restaurant_page_content h2 {
+.group h2 {
   margin-left: 5%;
   border-bottom: 3px solid var(--green);
   max-width: 40px;
   margin-bottom: 0%;
 }
-.restaurant_page_content .fa-heart__box {
+
+.restaurant_page_desc {
+  border: 1px solid #F6F6F6;
+  border-radius: 22px 22px 0 0;
+  background-color: #F6F6F6;
+  position: relative;
+  bottom: 5vh;
+}
+.restaurant_page_desc h1 {
+  margin-left: 5%;
+  margin-bottom: 0;
+  font-family: "shrikhand";
+}
+.restaurant_page_desc .fa-heart__box {
   display: flex;
   justify-content: flex-end;
-  position: absolute;
-  position: absolute;
+  position: relative;
   right: 79vw;
   top: 8vh;
 }
-.restaurant_page_content .fa-heart__box .fa-heart_full {
-  left: 77vw;
-  bottom: 5vh;
+.restaurant_page_desc .fa-heart__box .fa-heart_full {
+  position: absolute;
+  left: 168vw;
+  bottom: 10vh;
 }
-.restaurant_page_content .fa-heart__box .fa-heart__content_empty {
-  position: relative;
-  left: 77vw;
-  bottom: 5vh;
+.restaurant_page_desc .fa-heart__box .fa-heart__content_empty {
+  position: absolute;
+  left: 168vw;
+  bottom: 10vh;
 }
 
 .fa-heart:before {
   font-size: 24px;
 }
 
+.card {
+  width: 96%;
+  height: 69px;
+  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 19px;
+  padding: 15px;
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0px 2px 11px lightgrey;
+  animation: appear 4s;
+  animation-fill-mode: both;
+}
+.card:nth-child(1) {
+  color: red;
+  animation-delay: 100ms;
+}
+.card:nth-child(2) {
+  color: red;
+  animation-delay: 200ms;
+}
+.card:nth-child(3) {
+  color: red;
+  animation-delay: 300ms;
+}
+.card:nth-child(4) {
+  color: red;
+  animation-delay: 400ms;
+}
+.card p {
+  font-size: small;
+  margin-top: 6px;
+}
+.card .rounded {
+  background-color: white;
+  position: relative;
+  top: 36%;
+  left: 45%;
+  border-radius: 50% 50% 50% 50%;
+}
+.card .rounded i {
+  width: 19px;
+  height: 2px;
+  color: var(--green);
+  position: relative;
+  left: 0.5vh;
+  font-size: 14px;
+}
+.card .price {
+  width: 100%;
+  text-align: right;
+  transition: width ease 0.5s;
+  margin-top: -10px;
+  position: absolute;
+  right: 2vw;
+  font-weight: bold;
+}
+.card .text {
+  transition: width ease 0.5s;
+  margin: 0;
+  font-weight: bold;
+  font-size: large;
+}
+.card div {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: var(--green);
+  width: 0;
+  border-radius: 0 15px 15px 0;
+  transition: width ease 0.5s;
+  overflow: hidden;
+}
+
+.card:hover p {
+  width: 160px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.card:hover .price {
+  width: 150px;
+  margin-right: 20%;
+  transition: 0.5s;
+}
+.card:hover .rounded i {
+  animation: check 1s;
+}
+.card:hover .text {
+  width: 160px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.card:hover div {
+  width: 75px;
+}
+
+@keyframes check {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /*COEUR*/
 .fa-heart {
   cursor: pointer;
@@ -337,7 +421,7 @@ header i {
 }
 
 .fa-heart__content_empty {
-  position: relative;
+  position: absolute;
   left: 75vw;
   bottom: 6vh;
 }
@@ -418,18 +502,79 @@ header i {
   }
 }
 @media screen and (min-width: 768px) {
-  .functioning .functioning_title {
-    text-align: center;
+  .functioning {
+    margin: 0 13vw;
   }
-  .functioning_group {
+  .functioning .functioning_group {
     display: flex;
   }
-  .restaurants_section h2 {
-    text-align: center;
+  .restaurants_section {
+    margin: 0 13vw;
   }
   .restaurants_section .restaurants__card_section {
     display: flex;
     flex-direction: row;
+  }
+  .restaurants_section .restaurants__card_section .restaurants__card {
+    height: 32vh;
+  }
+  .restaurants_section .restaurants__card_section .restaurants__card_new {
+    width: 8vw;
+    height: 5vh;
+  }
+  .restaurants_section .restaurants__card_section .restaurants__card_new p {
+    margin: 6px 4px 4px 0;
+  }
+  .restaurants_section .restaurants__card__content {
+    position: relative;
+  }
+  .restaurants_section .restaurants__card__content .fa-heart__box {
+    position: relative;
+  }
+  .restaurants_section .restaurants__card__content .fa-heart__box .fa-heart_full {
+    position: absolute;
+    left: 78vw;
+    bottom: 7vh;
+  }
+  .restaurants_section .restaurants__card__content .fa-heart__box .fa-heart__content_empty {
+    position: absolute;
+    left: 78vw;
+    bottom: 7vh;
+  }
+  .restaurant_page_content {
+    display: flex;
+    justify-content: center;
+    gap: 19px;
+  }
+  .card {
+    width: 26vw;
+    height: 17%;
+  }
+  .card p {
+    font-size: small;
+    margin-top: 6px;
+    display: flex;
+    align-items: end;
+  }
+  .restaurant_page img {
+    max-height: 52vh;
+  }
+  .command {
+    margin: 2%;
+  }
+  .command button {
+    margin: 0;
+  }
+  .footer_content {
+    display: flex;
+  }
+  .footer_content__logo {
+    position: relative;
+    top: 9vh;
+  }
+  .footer_content .footer_content__menu {
+    display: flex;
+    justify-content: space-evenly;
   }
 }
 /* text-align */
@@ -549,296 +694,6 @@ main .city button:hover {
   box-shadow: #aaa 4px 4px 3px;
   background-blend-mode: lighten;
   background-color: #ae80e5;
-}
-
-/*CHECK*/
-/*.restaurant__card_check {
-  background-color: var(--green);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 4rem;
-  margin-right: -4rem;
-  transition-duration: 0.5s;
-  position: relative;
-  left: 74vw;
-  bottom: 9vh;
-  height: 46px;
-  margin-bottom: -49px;
-  width: 63px;
-  border-radius: 0 24px 24px 0;
-
-}
-
-.restaurant__card_check .rounded {
-  border-radius: 50% 50% 50% 50%;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: #fff;
-  color: var(--main-color);
-}*/
-/*.restaurant__card_check .fa {
-  margin: 5px;
-}
-.restaurant__card:hover {
-  transition: 0.2s;
-  box-shadow: #35353547 2px 4px 7px;
-}
-.restaurant__card:hover .restaurant__card_check {
-  margin: 0;
-}
-.restaurant__card:hover .restaurant__card_check .fa {
-  animation: check 0.5s;
-}
-.anim_show {
-  animation: show 0.3s 0.3s both;
-  animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
-}
-
-
-@keyframes check {
-  from {
-    transform: rotate(-290deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-@keyframes show {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}*/
-/*
-*{
-
-  box-sizing:border-box;
-
-}
-#card{
-
-   width: 250px;
-   height:75px;
-   border:1px solid #616161;
-   margin:0 auto;
-   margin-top:30px;
-   border-radius:15px;
-   padding:15px;
-   position:relative;
-
-}
-#card #text_1{
-
-   transition:width ease 0.5s;
-
-}
-
-#card div{
-
-    position:absolute;
-    right:0;
-    top:0;
-    bottom:0;
-    background:green;
-    width:0;
-    border-radius:0 15px 15px 0;
-    transition:width ease 0.5s;
-
-}
-
-#card:hover div{
-
-  width:75px;
-
-}
-#card:hover #text_1{
-  width:calc(250px - 90px);
-     text-overflow:ellipsis;
-  overflow:hidden;
-  white-space:nowrap;
-
-}
-
-#card #price{
-width:100%;
-text-align:right;
-transition:width ease 0.5s;
-}
-
-#card:hover #price{
-
- width:calc(250px - 100px); 
-
-}*/
-/*
-#card{
-
-  list-style: none;
-  margin: 15px 22px;
-  font-weight: bold;
-  display: flex;
-  border-radius: 22px;
-  background-color: white;
-  width: 96%;
-  box-shadow: 0px 2px 11px lightgrey;
-  position: relative;
-  right: 5%;
-  padding-left: 0%;
-  flex-direction: column;
-  position: relative;
-  animation: transform;
-  #text_1{
-    margin: 0;
-  }
-  .manu{
-    margin: 0;
-  }
-  span{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: small;
-    .price{
-      margin: 0;
-      margin-left: 123px;
-    }
-}
-  }
-  .check{
-    background-color: var(--green);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: -4rem;
-  transition-duration: 0.5s;
-  bottom: 9vh;
-  height: 46px;
-  margin-bottom: -49px;
-  border-radius: 0 24px 24px 0;
-  position: absolute;
-  width: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 77vw;
-  height: 100%;
-};
-
-#card:hover{
-  .check{
-    width: 63px ;
-    bottom: 0;
-    right: 0;
-    left: 77vw;
-    top:0;
-    height: 5.5vh;
-  }
-}
-*/
-#card {
-  width: 96%;
-  height: 69px;
-  margin: 0 auto;
-  margin-top: 30px;
-  border-radius: 19px;
-  padding: 15px;
-  position: relative;
-  overflow: hidden;
-  background-color: white;
-  box-shadow: 0px 2px 11px lightgrey;
-}
-#card p {
-  font-size: small;
-  margin-top: 6px;
-}
-#card .rounded {
-  background-color: white;
-  position: relative;
-  top: 36%;
-  left: 45%;
-  border-radius: 50% 50% 50% 50%;
-}
-#card .rounded i {
-  width: 19px;
-  height: 2px;
-}
-#card .rounded .fa-check {
-  animation: check 0.5s;
-}
-
-@keyframes check {
-  from {
-    transform: rotate(-290deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-#card #text {
-  transition: width ease 0.5s;
-  margin: 0;
-  font-weight: bold;
-  font-size: large;
-}
-
-#card div {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: var(--green);
-  width: 0;
-  border-radius: 0 15px 15px 0;
-  transition: width ease 0.5s;
-}
-
-#card:hover div {
-  width: 75px;
-}
-
-#card:hover #text {
-  width: 160px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-#card #price {
-  width: 100%;
-  text-align: right;
-  transition: width ease 0.5s;
-  margin-top: -10px;
-  position: absolute;
-  right: 2vw;
-}
-
-#card:hover p {
-  width: 160px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-#card:hover #price {
-  width: 150px;
-  margin-right: 20%;
-  transition: 0.5s;
-}
-#card:hover div:hover span i {
-  animation-name: check_spin;
-}
-
-@keyframes check_spin {
-  0% {
-    transform: rotate(-270deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
