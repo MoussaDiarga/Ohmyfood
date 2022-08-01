@@ -27,7 +27,8 @@ header{
     margin-left: 5%;
     border-bottom: 3px solid var(--green);
     max-width: 40px;
-    margin-bottom: 0%;
+    margin-bottom: 0;
+    margin-top: 0;
   }
 }
 .restaurant_page_desc{
@@ -40,23 +41,14 @@ header{
     margin-left: 5%;
     margin-bottom: 0;
     font-family: "shrikhand";
+    font-size: 25px;
   }
   & .fa-heart__box{
     display: flex;
     justify-content: flex-end;
     position: relative;
-    right: 79vw;
-    top: 8vh;
-    & .fa-heart_full{
-      position: absolute;
-      left: 168vw;
-      bottom: 10vh;
-    }
-    & .fa-heart__content_empty {
-      position: absolute;
-      left: 168vw;
-      bottom: 10vh;
-    }
+    right: 20px;
+    bottom: 37px;
     
   }
 }
@@ -82,7 +74,6 @@ header{
   animation-fill-mode: both;
   @for $i from 1 through 4{
    &:nth-child(#{$i}){
-    color: red;
     animation-delay: 100ms * $i;
    }
   }

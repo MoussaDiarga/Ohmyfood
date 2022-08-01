@@ -1,5 +1,5 @@
 /*COEUR*/
-
+/*
 
 .fa-heart {
     cursor: pointer;
@@ -49,4 +49,22 @@
     left: 75vw;
     bottom:6vh;
   }
-  
+  */
+
+  .fa-regular:hover{
+    cursor: pointer;
+    font-size: 1.5rem;
+    &:hover {
+      transform: scale(1.1);
+      transition: .4s;
+      background: linear-gradient(#FF79DA, #9356DC), #9356DC;;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      &:before {
+        font-family: "Font Awesome 6 Free";
+        content: "\f004";
+        font-weight: 900;
+      }
+    }
+  }
