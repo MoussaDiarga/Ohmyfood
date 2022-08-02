@@ -1,55 +1,4 @@
 /*COEUR*/
-/*
-
-.fa-heart {
-    cursor: pointer;
-  }
-  .fa-heart__content {
-    font-size: 2em;
-  }
-  .fa-heart__content_empty {
-    position: relative;
-    right: 1.25em;
-  }
-  .fa-heart__box {
-    position: relative;
-    right: 79vw;
-    top: 5vh;
-  }
-  .fa-heart__box:hover > .fa-heart_full {
-    opacity: 1;
-    transform: scale(1);
-  }
-  .fa-heart__box:hover > .fa-heart__content_empty {
-    opacity: 0;
-    transform: scale(1);
-  }
-  .fa-heart__content_empty {
-    transition: all 1000ms;
-    
-  }
-  .fa-heart__content_empty{
-    position: absolute;
-    left: 75vw;
-    bottom: 6vh;
-  }
-  .fa-heart_full {
-    color: #ff79da;
-    background: #ff79da;
-    background: linear-gradient(63deg, #ff79da 0%, #9356dc 100%);
-    background-clip: border-box;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    opacity: 0;
-    transition: all 1000ms;
-    transform: scale(0);
-    transform-origin: bottom;
-    z-index:9999;
-    position: absolute;
-    left: 75vw;
-    bottom:6vh;
-  }
-  */
 
   .fa-regular:hover{
     cursor: pointer;
@@ -57,8 +6,8 @@
     &:hover {
       transform: scale(1.1);
       transition: .4s;
-      background: linear-gradient(#FF79DA, #9356DC), #9356DC;;
-      background-clip: text;
+      background: linear-gradient(var(--pink), var(--main-color)), var(--main-color);
+     /* background-clip: text;*/
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       &:before {

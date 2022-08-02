@@ -12,3 +12,55 @@
     --dark-grey: #353535;
 
   }
+
+  /* text-align */
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align:left;
+}
+.mt_7{
+  margin-top: 7%;
+}
+/* position */ 
+
+.relative {
+  position:relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+/* flexbox */
+
+.flex {
+  display: flex;
+}
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.align-middle {
+  justify-content: center;
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+body{
+  margin:0px;
+  overflow-x: hidden;
+}
