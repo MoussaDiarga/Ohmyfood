@@ -27,13 +27,7 @@
     }
     &__section {
       padding-top: 1rem;
-     /* h2 {
-        color:var(--dark-grey);
-        user-select: none;
-        font-size: 1rem;
-        text-transform: uppercase;
-        margin-bottom: 0;
-      }*/
+    
       hr {
         border: var(--green) solid 1px;
         background-color: var(--green);
@@ -50,10 +44,6 @@
     background-color: white;
     border-radius: 22px;
     box-shadow: 0px 0px 10px grey;
-    & :hover{
-      transition: 0.2s;
-      filter: brightness(0.8);
-    }
   
     &_new {
       background-color: var(--green);
@@ -65,7 +55,7 @@
       right: 0;
       top: 0;
       z-index: 1;
-      width: 84px;
+      width: 84px; 
       height: 6vh;
       p{
         color:#008766;
@@ -102,34 +92,6 @@
       }
     }
   
-   /* &_heart {
-      transition: 0.2s;
-      font-size: 20px;
-      & .fa-solid{
-        position: relative;
-        right: 4.5vw;
-        opacity: 0;
-        transition: 0.2s;
-      }
-      & .restaurant__card_heart{
-
-        &:hover {
-          & .fa-regular.fa-heart::before{
-            opacity:0;
-          }
-          & .fa-solid:hover{
-          background-color: linear-gradient(var(--pink), var(--main-color)), var(--main-color);
-          position: relative;
-          right: 4.5vw;
-          opacity:1;
-          transition: 0.2s;
-          transform: scale(1.1);
-          }
-        }
-        
-      }
-
-    }*/
    }
 
 

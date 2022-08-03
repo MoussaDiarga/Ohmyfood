@@ -91,11 +91,10 @@ header{
         border-radius: 50% 50% 50% 50%;
         i{
           width: 19px;
-          height: 2px;
           color: var(--green);
           position: relative;
-          left: 0.5vh;
           font-size: 14px;
+          text-align: -webkit-center;
         }
       }
       .price{

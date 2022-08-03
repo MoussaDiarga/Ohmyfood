@@ -99,6 +99,13 @@
     &__logo{
         position: relative;
         top: 9vh;
+        & img{
+            width: 100px;
+        filter: invert(1);
+        padding-bottom: 1rem;
+        position: relative;
+        bottom: 8vh;
+        }
     }
     & .footer_content__menu{
         display: flex;
