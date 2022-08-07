@@ -133,46 +133,7 @@ header{
     
     
     
-    .card:hover{
-    p{
-    width:calc(250px - 90px);
-    text-overflow:ellipsis;
-    overflow:hidden;
-    white-space:nowrap;
-     }
-    .price{
-     width:calc(250px - 100px);
-     margin-right: 20%; 
-     transition: 0.5s;
-     }
-     .rounded{
-      i{
-        animation: check 1s;
-      }
-     }
-     .text{
-      width:calc(250px - 90px);
-      text-overflow:ellipsis;
-      overflow:hidden;
-      white-space:nowrap;
-     
-     }
-     div{
     
-      width:75px;
-     
-     }
-     
-    }
-     
-    @keyframes check {
-      from {
-        transform: rotate(-360deg);
-      }
-      to {
-        transform: rotate(0deg);
-      }
-    }
     
 
     @keyframes appear{
