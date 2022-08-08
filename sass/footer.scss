@@ -1,0 +1,32 @@
+.footer_content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+  padding-bottom: 52px;
+  background-color: var(--dark-grey);
+  color: var(--light-grey);
+
+  &__logo img {
+    width: 100px;
+    filter: invert(1);
+    padding-bottom: 1rem;
+  }
+
+  &__menu {
+    list-style-type: none;
+    padding-left: 0;
+
+    li {
+      margin: 0 1rem;
+    }
+  }
+  & a {
+    color: white;
+    font-size: small;
+  }
+  & .fa {
+    color: white;
+    padding-right: 0.64px;
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,96 @@
+/*COEUR*/
+
+.fa-heart {
+  cursor: pointer;
+}
+.fa-heart__content {
+  font-size: 2em;
+  & .fa-regular {
+    position: relative;
+    left: 13px;
+  }
+
+  & .fas {
+    opacity: 0;
+  }
+}
+
+.fa-heart__box:hover .fas {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+  right: 11px;
+  bottom: 0.5;
+}
+.fa-heart__box:hover .fa-regular {
+  opacity: 0;
+  transform: scale(1);
+}
+.fa-heart__content {
+  & .fa-regular {
+    transition: all 1000ms;
+  }
+  & .fas {
+    color: #ff79da;
+    background: #ff79da;
+    background: linear-gradient(63deg, #ff79da 0%, #9356dc 100%);
+    background-clip: border-box;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: all 1000ms;
+    transform: scale(0);
+    transform-origin: bottom;
+    z-index: 9999;
+    position: relative;
+    right: 11px;
+    bottom: 0.5;
+  }
+}
+.restaurants__card {
+  .fa-heart__box {
+    .fa-regular {
+      position: relative;
+      left: 21px;
+    }
+  }
+}
+
+/*CHECK*/
+
+.card:hover {
+  p {
+    width: calc(250px - 90px);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .price {
+    width: calc(250px - 100px);
+    margin-right: 20%;
+    transition: 0.5s;
+  }
+  .rounded {
+    i {
+      animation: check 1s;
+    }
+  }
+  .text {
+    width: calc(250px - 90px);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  div {
+    width: 75px;
+  }
+}
+
+@keyframes check {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}

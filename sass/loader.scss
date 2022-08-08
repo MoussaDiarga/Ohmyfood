@@ -1,0 +1,38 @@
+.loader {
+  background-color: #ffff;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+  animation: disappear 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
+  &::after {
+    content: "";
+    height: 100px;
+    width: 100px;
+    border-right: 5px solid transparent;
+    border-top: 5px dashed var(--main-color);
+    border-radius: 50%;
+    animation: spin 3s infinite linear;
+  }
+}
+
+@keyframes disappear {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
